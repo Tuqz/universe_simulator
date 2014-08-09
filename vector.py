@@ -15,8 +15,12 @@ class Vector:
 		else:
 			return Vector(self.x*other, self.y*other)
 	
+	
 	def __rmul__(self, scalar):
 		return Vector(self.x*scalar, self.y*scalar)
 	
 	def __abs__(self):
 		return (self*self)**0.5
+
+	def __truediv__(self, scalar):
+		return Vector(self.x/scalar, self.y/scalar)
